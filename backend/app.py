@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from sqlalchemy.exc import IntegrityError
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import re
@@ -260,4 +261,5 @@ def users():
             return jsonify({"error": e})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    db.create_all()
+    app.run()

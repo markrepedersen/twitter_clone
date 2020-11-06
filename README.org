@@ -1,0 +1,25 @@
+* Description
+  Due to time constraints, this does not address adding comments to tweets. It is only able to register/login/view tweets/add tweets/live updating tweets
+  
+* Usage
+** Frontend
+   #+begin_src bash
+     cd frontend
+     npm install
+     npm start
+   #+end_src
+
+** Backend
+   #+begin_src bash
+     cd backend
+     pip install -r requirements.txt
+     python app.py
+   #+end_src
+
+* Deployment
+  (Note that both containers will be spun up, but won't connect to each other. I didn't finish bridging both networks due to time constraints)
+  This can be deployed to CI server or to production easily using Docker by doing the following:
+  
+  #+begin_src bash
+    docker-compose up
+  #+end_src
